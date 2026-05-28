@@ -103,21 +103,6 @@ namespace Coursework_Master_Degree.Player
                     _crouchValue = _crouchInputAction.ReadValue<float>();
                 };
 
-            // if (_crouchValue > 0.5f)
-            // {
-            //     Vector3 crouchToggleScale = new Vector3(0f, 0.5f, 0f);
-            //     if (_isCrouch)
-            //     {
-            //         PlayerRigidbody.transform.localScale += crouchToggleScale;
-            //     }
-            //     else
-            //     {
-            //         PlayerRigidbody.transform.localScale -= crouchToggleScale;
-            //     }
-            //     _isCrouch = !_isCrouch;
-            //     _crouchValue = default;
-            // }
-
             CalculateLook();
 
             EyesTransform.localRotation = Quaternion.Euler(_pitch, 0f, 0f);
