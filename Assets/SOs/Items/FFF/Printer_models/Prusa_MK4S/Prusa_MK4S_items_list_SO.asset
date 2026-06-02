@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0f80e55117c5bb7a44be77c9371ced, type: 3}
+  m_Name: Prusa_MK4S_items_list_SO
+  m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.ScriptableObjects.ItemsListSO
+  ItemsListName: Prusa MK4S
+  ItemsList:
+  - {fileID: 11400000, guid: d2091a6c8b0e2b32ebcf7253e5f3010a, type: 2}
+  - {fileID: 11400000, guid: 7440c7af9d07d24e3bbff4760f761771, type: 2}

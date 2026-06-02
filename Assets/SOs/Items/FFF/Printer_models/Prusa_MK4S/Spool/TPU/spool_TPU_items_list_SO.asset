@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0f80e55117c5bb7a44be77c9371ced, type: 3}
+  m_Name: spool_TPU_items_list_SO
+  m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.ScriptableObjects.ItemsListSO
+  ItemsListName: Prusa MK4S spool TPU
+  ItemsList:
+  - {fileID: 11400000, guid: 3d831d40cee68a583950dfae84d6286b, type: 2}
+  - {fileID: 11400000, guid: 99d813c1815e479889d076934c4ba732, type: 2}
+  - {fileID: 11400000, guid: 5969a8ddfa9c0ec2f97168dff3777ee9, type: 2}
+  - {fileID: 11400000, guid: 1dd3a8511ade5cab0947e2dddb2ed2de, type: 2}
+  - {fileID: 11400000, guid: 90fbadea13e40e7df8cc1c0b03c3c428, type: 2}

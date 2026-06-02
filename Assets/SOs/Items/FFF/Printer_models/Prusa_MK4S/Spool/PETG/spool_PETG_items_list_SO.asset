@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0f80e55117c5bb7a44be77c9371ced, type: 3}
+  m_Name: spool_PETG_items_list_SO
+  m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.ScriptableObjects.ItemsListSO
+  ItemsListName: Prusa MK4S spool PETG
+  ItemsList:
+  - {fileID: 11400000, guid: 923af264817ea5e9e85717c168692142, type: 2}
+  - {fileID: 11400000, guid: 71ffabdb3ec78c013bfbc64cb9d70112, type: 2}
+  - {fileID: 11400000, guid: c99da118890180341977454745f6a2c8, type: 2}
+  - {fileID: 11400000, guid: 0eb6b95f94cdc66fa88ee6ade0bcf9fc, type: 2}
+  - {fileID: 11400000, guid: c87172a4a75eddc85ab066d0f97cbd49, type: 2}

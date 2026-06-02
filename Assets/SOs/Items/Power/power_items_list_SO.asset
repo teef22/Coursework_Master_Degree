@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0f80e55117c5bb7a44be77c9371ced, type: 3}
+  m_Name: power_items_list_SO
+  m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.ScriptableObjects.ItemsListSO
+  ItemsListName: Power
+  ItemsList:
+  - {fileID: 11400000, guid: 1aea45d841f34b8c5b08cafce147b6e7, type: 2}
+  - {fileID: 11400000, guid: 0013f9ef6e8d31d4ea3978162cb91620, type: 2}
+  - {fileID: 11400000, guid: b7ed97cbddbd780faab51e5fe110b60c, type: 2}
+  - {fileID: 11400000, guid: 8091ad85b89f32a30832860a0ad018a9, type: 2}
+  - {fileID: 11400000, guid: 37a730184b7aaba4f85d1e7d66719cb1, type: 2}

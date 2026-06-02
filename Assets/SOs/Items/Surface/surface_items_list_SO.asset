@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0f80e55117c5bb7a44be77c9371ced, type: 3}
+  m_Name: surface_items_list_SO
+  m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.ScriptableObjects.ItemsListSO
+  ItemsListName: Surface
+  ItemsList:
+  - {fileID: 11400000, guid: 165baa8fd71016a89a28643491190e01, type: 2}
+  - {fileID: 11400000, guid: 6465d5130af286f9abaa7d80b0c42312, type: 2}
+  - {fileID: 11400000, guid: 9fbb5161b5ed62fbeaaeb56b90fc063e, type: 2}
+  - {fileID: 11400000, guid: 5e5004b0a777f329b88c5fe85b6ddadb, type: 2}
+  - {fileID: 11400000, guid: 3d65f5f983970c327b08983df0d79b51, type: 2}
+  - {fileID: 11400000, guid: 805eb1e54c132fce49a4c1157bef7c3a, type: 2}

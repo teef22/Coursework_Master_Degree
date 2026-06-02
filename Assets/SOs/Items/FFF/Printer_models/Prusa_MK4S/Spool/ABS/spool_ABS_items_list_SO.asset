@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0f80e55117c5bb7a44be77c9371ced, type: 3}
+  m_Name: spool_ABS_items_list_SO
+  m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.ScriptableObjects.ItemsListSO
+  ItemsListName: Prusa MK4S spool ABS
+  ItemsList:
+  - {fileID: 11400000, guid: 305b05fe0a1608faf93aa213c3d2ab3b, type: 2}
+  - {fileID: 11400000, guid: def92af9dda97064b91a5eca65ee26ba, type: 2}
+  - {fileID: 11400000, guid: a315f6f18aebaa7989bce49bb500725b, type: 2}
+  - {fileID: 11400000, guid: d29cf3b2cca1af7d4beeeda2bc7b2d44, type: 2}
+  - {fileID: 11400000, guid: 2672716bc64081c9d839c81a010e99b9, type: 2}

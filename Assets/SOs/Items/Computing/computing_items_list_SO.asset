@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0f80e55117c5bb7a44be77c9371ced, type: 3}
+  m_Name: computing_items_list_SO
+  m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.ScriptableObjects.ItemsListSO
+  ItemsListName: Computing
+  ItemsList:
+  - {fileID: 11400000, guid: d684d3fcc5323f361b726f39b9a6e1f7, type: 2}
+  - {fileID: 11400000, guid: e90cae9d2e37d5dde95dc39e92eab3a0, type: 2}
+  - {fileID: 11400000, guid: 69606cf617bb05ebf9c201d2b399b248, type: 2}
+  - {fileID: 11400000, guid: 9f373a59b8d0c6da698afe8c56ec1ccf, type: 2}
