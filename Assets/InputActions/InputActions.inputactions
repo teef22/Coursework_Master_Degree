@@ -3,7 +3,7 @@
     "name": "InputActions",
     "maps": [
         {
-            "name": "player",
+            "name": "player_movement",
             "id": "ee54fa7b-f9cd-4e7d-9e9f-cff0915c634a",
             "actions": [
                 {
@@ -23,6 +23,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "zoom_look",
+                    "type": "Button",
+                    "id": "4f9402c9-a2ef-4a32-867e-751653bba2ce",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "jump",
@@ -169,6 +178,98 @@
                     "processors": "",
                     "groups": ";keyboard&mouse",
                     "action": "slow_down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f0014f0e-7578-42fd-811e-dee4b40f0ff2",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";keyboard&mouse",
+                    "action": "zoom_look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "user_interface",
+            "id": "a65b594f-7545-4330-864a-57f8c5912d57",
+            "actions": [
+                {
+                    "name": "show_core_item_pick_menu_interface",
+                    "type": "Button",
+                    "id": "affdebf7-e610-4e5b-a7b4-d8927a30878e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "hide_any_menu_interface",
+                    "type": "Button",
+                    "id": "c0d4b367-f7ec-4142-ba48-811bc1cb80c3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "One Modifier",
+                    "id": "b7c3af57-7b3a-4a6e-a6e9-38e8a620b20e",
+                    "path": "OneModifier(modifiersOrder=1)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "show_core_item_pick_menu_interface",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "99f43c82-63ac-420c-8057-e2f9777cf7b0",
+                    "path": "<Keyboard>/leftCtrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";keyboard&mouse",
+                    "action": "show_core_item_pick_menu_interface",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "binding",
+                    "id": "0a7f241e-fe02-4c26-b46a-2b825477ad60",
+                    "path": "<Mouse>/middleButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";keyboard&mouse",
+                    "action": "show_core_item_pick_menu_interface",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "8a7b1ed3-771f-4141-96fd-baf16dba2ba7",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";keyboard&mouse",
+                    "action": "hide_any_menu_interface",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2cac2465-3554-4ca9-ba36-148d258ba95e",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";keyboard&mouse",
+                    "action": "hide_any_menu_interface",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
