@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc98cacec09ba25dc973d10189cf453c, type: 3}
+  m_Name: Prusa_MK4S_printer_axis_belt_SO
+  m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.ScriptableObjects.ItemSO
+  Id: item_Prusa_MK4S_printer_axis_belt
+  Name: Prusa MK4S printer axis belt
+  Description: Toothed belt transferring motion between motor and axis
+  Price: 25
+  Prefab: {fileID: 2709728948512804140, guid: 3634e61f278b56983adc0b84899edf06, type: 3}
+  Icon: {fileID: 2800000, guid: 47c05b900b76c13189f369a29cafe53a, type: 3}
+  ItemTypes: 0200000003000000040000000600000007000000

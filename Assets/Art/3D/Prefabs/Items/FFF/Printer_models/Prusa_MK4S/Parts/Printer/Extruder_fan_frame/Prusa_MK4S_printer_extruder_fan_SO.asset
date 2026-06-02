@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc98cacec09ba25dc973d10189cf453c, type: 3}
+  m_Name: Prusa_MK4S_printer_extruder_fan_SO
+  m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.ScriptableObjects.ItemSO
+  Id: item_Prusa_MK4S_printer_extruder_fan
+  Name: Prusa MK4S printer extruder fan
+  Description: Cooling fan regulating temperature of extruder components
+  Price: 20
+  Prefab: {fileID: 933341088213266240, guid: be5221e054609233aa7c72e7ba28f31c, type: 3}
+  Icon: {fileID: 2800000, guid: be29ad49fc4015f6f97c0ceab1bd9a9b, type: 3}
+  ItemTypes: 0200000003000000040000000600000007000000

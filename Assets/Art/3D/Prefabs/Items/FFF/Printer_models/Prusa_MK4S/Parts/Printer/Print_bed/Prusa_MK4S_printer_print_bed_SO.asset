@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc98cacec09ba25dc973d10189cf453c, type: 3}
+  m_Name: Prusa_MK4S_printer_print_bed_SO
+  m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.ScriptableObjects.ItemSO
+  Id: item_Prusa_MK4S_printer_print_bed
+  Name: Prusa MK4S printer print bed
+  Description: Heated platform where objects are printed layer by layer
+  Price: 90
+  Prefab: {fileID: 6833195417905576227, guid: 71cb72765373f5726b1b13ee399b5f89, type: 3}
+  Icon: {fileID: 2800000, guid: d9b85edc52932db67b38b618aed24fe7, type: 3}
+  ItemTypes: 0200000003000000040000000600000007000000

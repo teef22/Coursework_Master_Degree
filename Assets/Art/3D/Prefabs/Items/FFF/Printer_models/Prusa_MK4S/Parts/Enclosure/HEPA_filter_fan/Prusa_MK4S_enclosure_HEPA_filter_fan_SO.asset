@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc98cacec09ba25dc973d10189cf453c, type: 3}
+  m_Name: Prusa_MK4S_enclosure_HEPA_filter_fan_SO
+  m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.ScriptableObjects.ItemSO
+  Id: item_Prusa_MK4S_enclosure_HEPA_filter_fan
+  Name: Prusa MK4S enclosure HEPA filter fan
+  Description: Fan unit filtering air particles inside enclosure
+  Price: 60
+  Prefab: {fileID: 607690325978844127, guid: 5af48395afb29d1c2ac0ea3e360dd80a, type: 3}
+  Icon: {fileID: 2800000, guid: 94b871d852409a77a86f2800466e2405, type: 3}
+  ItemTypes: 0200000003000000040000000600000005000000

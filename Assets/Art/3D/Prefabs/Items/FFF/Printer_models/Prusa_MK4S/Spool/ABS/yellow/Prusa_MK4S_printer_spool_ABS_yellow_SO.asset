@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc98cacec09ba25dc973d10189cf453c, type: 3}
+  m_Name: Prusa_MK4S_printer_spool_ABS_yellow_SO
+  m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.ScriptableObjects.ItemSO
+  Id: item_Prusa_MK4S_printer_spool_ABS_yellow
+  Name: Prusa MK4S printer spool ABS yellow
+  Description: Yellow strong filament requiring enclosure, emits noticeable fumes
+  Price: 24
+  Prefab: {fileID: 6245900780811570333, guid: eb5b9ae83d19ec62b8a7ff6259156e54, type: 3}
+  Icon: {fileID: 2800000, guid: ae5b67ebed28d917388b9d5332709ad1, type: 3}
+  ItemTypes: 0200000003000000040000000800000009000000

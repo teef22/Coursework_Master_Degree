@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc98cacec09ba25dc973d10189cf453c, type: 3}
+  m_Name: Prusa_MK4S_printer_extruder_filament_bearing_SO
+  m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.ScriptableObjects.ItemSO
+  Id: item_Prusa_MK4S_printer_extruder_filament_bearing
+  Name: Prusa MK4S printer extruder filament bearing
+  Description: Bearing allowing smooth filament feeding during printing
+  Price: 35
+  Prefab: {fileID: 6762102602121053899, guid: 1b852a6e5ebeead4a880f8d00c11d476, type: 3}
+  Icon: {fileID: 2800000, guid: 93121a80241cff3358ea91563bd3ebb6, type: 3}
+  ItemTypes: 0200000003000000040000000600000007000000

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc98cacec09ba25dc973d10189cf453c, type: 3}
+  m_Name: separator_blade_SO
+  m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.ScriptableObjects.ItemSO
+  Id: item_separator_blade
+  Name: Separator blade
+  Description: Thin blade for prying and separating bonded parts
+  Price: 8
+  Prefab: {fileID: 6232608750328363069, guid: 31f02caae87cd37e6b70477bb48a4d6b, type: 3}
+  Icon: {fileID: 2800000, guid: 474663051d3650c3b81261efac35f437, type: 3}
+  ItemTypes: 020000000f000000

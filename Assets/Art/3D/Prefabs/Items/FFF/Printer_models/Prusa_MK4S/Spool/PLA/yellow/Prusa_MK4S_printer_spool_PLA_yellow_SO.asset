@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc98cacec09ba25dc973d10189cf453c, type: 3}
+  m_Name: Prusa_MK4S_printer_spool_PLA_yellow_SO
+  m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.ScriptableObjects.ItemSO
+  Id: item_Prusa_MK4S_printer_spool_PLA_yellow
+  Name: Prusa MK4S printer spool PLA yellow
+  Description: Yellow biodegradable filament for easy, reliable general-purpose printing
+  Price: 20
+  Prefab: {fileID: 6245900780811570333, guid: 119ca33d7f1e907239317686017e297e, type: 3}
+  Icon: {fileID: 2800000, guid: a85d2ea9c675634079f0db6efe023e00, type: 3}
+  ItemTypes: 020000000300000004000000080000000b000000

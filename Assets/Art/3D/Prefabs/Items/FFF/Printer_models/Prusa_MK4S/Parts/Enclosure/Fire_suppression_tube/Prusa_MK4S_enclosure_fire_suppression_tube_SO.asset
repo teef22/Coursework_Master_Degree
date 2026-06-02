@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc98cacec09ba25dc973d10189cf453c, type: 3}
+  m_Name: Prusa_MK4S_enclosure_fire_suppression_tube_SO
+  m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.ScriptableObjects.ItemSO
+  Id: item_Prusa_MK4S_enclosure_fire_suppression_tube
+  Name: Prusa MK4S enclosure fire suppression tube
+  Description: Safety tube that releases fire-suppressing agent when overheating
+  Price: 120
+  Prefab: {fileID: 1877158471484422364, guid: ec373b7abd93f6246a7253a853644218, type: 3}
+  Icon: {fileID: 2800000, guid: e6423049e623570a0adb361319c10a76, type: 3}
+  ItemTypes: 0200000003000000040000000600000005000000

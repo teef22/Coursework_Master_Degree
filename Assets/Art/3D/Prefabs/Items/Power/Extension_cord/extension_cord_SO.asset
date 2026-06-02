@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc98cacec09ba25dc973d10189cf453c, type: 3}
+  m_Name: extension_cord_SO
+  m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.ScriptableObjects.ItemSO
+  Id: item_extension_cord
+  Name: Extension cord
+  Description: Portable cable for extending power from wall outlets
+  Price: 15
+  Prefab: {fileID: 7028769894868470644, guid: 23a3276b5fa250a01851ea80d1d0b52e, type: 3}
+  Icon: {fileID: 2800000, guid: 3eb7268ecf92fbdc0825ea716a7c21ac, type: 3}
+  ItemTypes: 0d000000

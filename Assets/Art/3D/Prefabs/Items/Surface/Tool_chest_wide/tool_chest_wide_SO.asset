@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc98cacec09ba25dc973d10189cf453c, type: 3}
+  m_Name: tool_chest_wide_SO
+  m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.ScriptableObjects.ItemSO
+  Id: item_tool_chest_wide
+  Name: Tool chest wide
+  Description: Large tool storage unit with multiple compartments
+  Price: 180
+  Prefab: {fileID: 84012404004594758, guid: 1b38c2ad1da79c4d6a060900d5a512ff, type: 3}
+  Icon: {fileID: 2800000, guid: 8d560ac0dffa047b39454c80a623bae7, type: 3}
+  ItemTypes: 0e000000

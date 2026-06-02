@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc98cacec09ba25dc973d10189cf453c, type: 3}
+  m_Name: Prusa_MK4S_printer_axis_rotor_bearing_SO
+  m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.ScriptableObjects.ItemSO
+  Id: item_Prusa_MK4S_printer_axis_rotor_bearing
+  Name: Prusa MK4S printer axis rotor bearing
+  Description: Bearing supporting smooth movement of the rotor axis
+  Price: 18
+  Prefab: {fileID: 3138477101525482754, guid: 0f68ffe7c7b64cef0abf1c151fe10a0e, type: 3}
+  Icon: {fileID: 2800000, guid: 2406ac1a97471033884e556d46a3ff24, type: 3}
+  ItemTypes: 0200000003000000040000000600000007000000

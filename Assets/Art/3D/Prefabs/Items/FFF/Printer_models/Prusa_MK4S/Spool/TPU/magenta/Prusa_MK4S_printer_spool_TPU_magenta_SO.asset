@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc98cacec09ba25dc973d10189cf453c, type: 3}
+  m_Name: Prusa_MK4S_printer_spool_TPU_magenta_SO
+  m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.ScriptableObjects.ItemSO
+  Id: item_Prusa_MK4S_printer_spool_TPU_magenta
+  Name: Prusa MK4S printer spool TPU magenta
+  Description: Magenta flexible rubber-like filament for durable elastic prints
+  Price: 45
+  Prefab: {fileID: 6245900780811570333, guid: 6fd03717c0efebff8b6b36f03fc0b5aa, type: 3}
+  Icon: {fileID: 2800000, guid: c96360598923650bb86cd0dda5ec7b6f, type: 3}
+  ItemTypes: 020000000300000004000000080000000c000000

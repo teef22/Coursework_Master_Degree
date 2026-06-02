@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc98cacec09ba25dc973d10189cf453c, type: 3}
+  m_Name: Prusa_MK4S_printer_SO
+  m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.ScriptableObjects.ItemSO
+  Id: item_Prusa_MK4S_printer
+  Name: Prusa MK4S printer
+  Description: High-precision 3D printer for reliable filament printing
+  Price: 1100
+  Prefab: {fileID: 2321595096870056498, guid: 04e40b9a1ded2d94084d1c35f6dc6398, type: 3}
+  Icon: {fileID: 2800000, guid: aa816dacd8b6ee3c4912088bd8d62bf2, type: 3}
+  ItemTypes: 02000000030000000400000007000000
