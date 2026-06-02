@@ -59,7 +59,7 @@ namespace Coursework_Master_Degree.Player
                 Debug.LogError("UpLimitLookAngle must be smaller than DownLimitLookAngle");
             }
 
-            InputActionMap inputActionMap = GlobalInputAction.FindActionMap("player", true);
+            InputActionMap inputActionMap = GlobalInputAction.FindActionMap("player_movement", true);
             _moveInputAction = inputActionMap.FindAction("move", true);
             _speedUpInputAction = inputActionMap.FindAction("speed_up", true);
             _slowDownInputAction = inputActionMap.FindAction("slow_down", true);
