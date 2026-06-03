@@ -172,6 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Movement
   PlayerRigidbody: {fileID: 8771976657203517449}
   EyesTransform: {fileID: 3481415748428377934}
+  EyesCamera: {fileID: 2150490673395912624}
   GlobalInputAction: {fileID: -944628639613478452, guid: 4bff531e5862c70e78c2778499520888, type: 3}
   MoveSpeed: 2
   SpedUpMoveSpeed: 5
@@ -180,8 +181,11 @@ MonoBehaviour:
   LookSpeed: 1
   UpLimitLookAngle: -70
   DownLimitLookAngle: 70
+  ZoomLookFieldOfView: 20
+  ZoomLookSpeed: 0.33333334
+  ZoomLookTransitionDuration: 0.1
   CrouchScale: 0.5
-  CrouchDuration: 0.3
+  CrouchTransitionDuration: 0.3
 --- !u!54 &8771976657203517449
 Rigidbody:
   m_ObjectHideFlags: 0
