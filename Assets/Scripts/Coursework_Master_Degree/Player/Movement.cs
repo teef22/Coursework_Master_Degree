@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,24 +6,38 @@ namespace Coursework_Master_Degree.Player
 {
     public class Movement : MonoBehaviour
     {
+        // naughty attributes enableif / disableif states
+        private bool NotEnabled => false;
+        private bool Enabled => true;
+
+        [Header("Components")]
         public Rigidbody PlayerRigidbody;
         public Transform EyesTransform;
+        public Camera EyesCamera;
 
+        [Header("Global input system")]
         public InputActionAsset GlobalInputAction;
 
-        public float MoveSpeed;
-        public float SpedUpMoveSpeed;
-        public float SlowDownMoveSpeed;
-        public float CrouchMoveSpeed;
+        [Header("Speed")]
+        [Min(0.01f)] public float MoveSpeed;
+        [Min(0.01f)] public float SpedUpMoveSpeed;
+        [Min(0.01f)] public float SlowDownMoveSpeed;
+        [Min(0.01f)] public float CrouchMoveSpeed;
 
-        public float LookSpeed;
-        public float UpLimitLookAngle;
-        public float DownLimitLookAngle;
+        [Header("Look")]
+        [Min(0.01f)] public float LookSpeed;
+        [Min(0.01f)] public float UpLimitLookAngle;
+        [Min(0.01f)] public float DownLimitLookAngle;
 
-        [Min(0.3f)]
-        public float CrouchScale;
-        [Min(0.1f)]
-        public float CrouchDuration;
+        [Header("Zoom")]
+        [Min(0.01f)] public float ZoomLookFieldOfView;
+        [DisableIf("Enabled")]
+        [Min(0.01f)] public float ZoomLookSpeed;
+        [Min(0.1f)] public float ZoomLookTransitionDuration;
+
+        [Header("Crouch")]
+        [Min(0.3f)] public float CrouchScale;
+        [Min(0.1f)] public float CrouchTransitionDuration;
 
         private float _yaw;
         private float _pitch;
@@ -32,12 +47,23 @@ namespace Coursework_Master_Degree.Player
         private InputAction _slowDownInputAction;
         private InputAction _lookInputAction;
         private InputAction _crouchInputAction;
+        private InputAction _zoomLookInputAction;
 
         private Vector2 _moveValue;
         private float _speedUpValue;
         private float _slowDownValue;
         private Vector2 _lookValue;
         private float _crouchValue;
+        private float _zoomLookValue;
+
+        private float _currentLookSpeed;
+
+        private float _regularLookFieldOfView;
+        private bool _isToZoomLook;
+        private bool _isZoomLookTransition;
+        private float _zoomLookTimePassed;
+        private float _zoomLookFrom;
+        private float _zoomLookTo;
 
         private Vector3 _crouchScale;
         private Vector3 _regularScale;
@@ -47,9 +73,30 @@ namespace Coursework_Master_Degree.Player
         private Vector3 _scaleFrom;
         private Vector3 _scaleTo;
 
+        // set editor only values
+        private void OnValidate()
+        {
+            // zoom look speed
+            if (ZoomLookFieldOfView > 0.0f && LookSpeed > 0.0f)
+                ZoomLookSpeed = CalculateZoomLookSpeed();
+            else
+                ZoomLookSpeed = 0.0f;
+        }
+
+        private float CalculateZoomLookSpeed()
+        {
+            return LookSpeed * ZoomLookFieldOfView / EyesCamera.fieldOfView;
+        }
+
         void Awake()
         {
             HideCursor();
+
+            CalculateZoomLookSpeed();
+
+            _currentLookSpeed = LookSpeed;
+
+            _regularLookFieldOfView = EyesCamera.fieldOfView;
 
             _crouchScale = new Vector3(1f, CrouchScale, 1f);
             _regularScale = Vector3.one;
@@ -64,6 +111,7 @@ namespace Coursework_Master_Degree.Player
             _speedUpInputAction = inputActionMap.FindAction("speed_up", true);
             _slowDownInputAction = inputActionMap.FindAction("slow_down", true);
             _lookInputAction = inputActionMap.FindAction("look", true);
+            _zoomLookInputAction = inputActionMap.FindAction("zoom_look", true);
             _crouchInputAction = inputActionMap.FindAction("crouch", true);
         }
 
@@ -79,6 +127,7 @@ namespace Coursework_Master_Degree.Player
             _speedUpInputAction.Enable();
             _slowDownInputAction.Enable();
             _lookInputAction.Enable();
+            _zoomLookInputAction.Enable();
             _crouchInputAction.Enable();
         }
 
@@ -88,6 +137,7 @@ namespace Coursework_Master_Degree.Player
             _speedUpInputAction.Disable();
             _slowDownInputAction.Disable();
             _lookInputAction.Disable();
+            _zoomLookInputAction.Disable();
             _crouchInputAction.Disable();
         }
 
@@ -97,6 +147,11 @@ namespace Coursework_Master_Degree.Player
             _speedUpValue = _speedUpInputAction.ReadValue<float>();
             _slowDownValue = _slowDownInputAction.ReadValue<float>();
             _lookValue = _lookInputAction.ReadValue<Vector2>();
+            _zoomLookInputAction.started += 
+                (context) =>
+                {
+                    _zoomLookValue = _zoomLookInputAction.ReadValue<float>();
+                };
             _crouchInputAction.started += 
                 (context) =>
                 {
@@ -107,14 +162,64 @@ namespace Coursework_Master_Degree.Player
 
             EyesTransform.localRotation = Quaternion.Euler(_pitch, 0f, 0f);
 
+            ApplyZoomLook();
             ApplyCrouch();
         }
 
         private void CalculateLook()
         {
-            _yaw += _lookValue.x * LookSpeed * Time.deltaTime;
-            _pitch -= _lookValue.y * LookSpeed * Time.deltaTime;
+            _yaw += _lookValue.x * _currentLookSpeed * Time.deltaTime;
+            _pitch -= _lookValue.y * _currentLookSpeed * Time.deltaTime;
             _pitch = Mathf.Clamp(_pitch, UpLimitLookAngle, DownLimitLookAngle);
+        }
+
+        private void ApplyZoomLook()
+        {
+            if (_zoomLookValue > 0.5f)
+            {
+                if (!_isZoomLookTransition)
+                {
+                    _isToZoomLook = !_isToZoomLook;
+                    _isZoomLookTransition = true;
+
+                    if (_isToZoomLook)
+                    {
+                        _currentLookSpeed = ZoomLookSpeed;
+
+                        _zoomLookFrom = EyesCamera.fieldOfView;
+                        _zoomLookTo = ZoomLookFieldOfView;
+                    }
+                    else
+                    {
+                        _currentLookSpeed = LookSpeed;
+
+                        _zoomLookFrom = EyesCamera.fieldOfView;
+                        _zoomLookTo = _regularLookFieldOfView;
+                    }
+                }
+
+                _zoomLookValue = default;
+            }
+
+            if (_isZoomLookTransition)
+            {
+                _zoomLookTimePassed += Time.deltaTime / ZoomLookTransitionDuration;
+                _zoomLookTimePassed = Mathf.Clamp01(_zoomLookTimePassed);
+
+                EyesCamera.fieldOfView = 
+                    Mathf.Lerp(
+                        _zoomLookFrom,
+                        _zoomLookTo,
+                        _zoomLookTimePassed);
+                
+                if (Mathf.Approximately(
+                    EyesCamera.fieldOfView,
+                    _zoomLookTo))
+                {
+                    _isZoomLookTransition = default;
+                    _zoomLookTimePassed = default;
+                }
+            }
         }
 
         private void ApplyCrouch()
@@ -143,7 +248,7 @@ namespace Coursework_Master_Degree.Player
 
             if (_isCrouchTransition)
             {
-                _crouchTimePassed += Time.deltaTime / CrouchDuration;
+                _crouchTimePassed += Time.deltaTime / CrouchTransitionDuration;
                 _crouchTimePassed = Mathf.Clamp01(_crouchTimePassed);
 
                 PlayerRigidbody.transform.localScale = 
