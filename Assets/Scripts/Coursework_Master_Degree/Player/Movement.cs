@@ -1,5 +1,5 @@
-using NaughtyAttributes;
 using UnityEngine;
+using NaughtyAttributes;
 using UnityEngine.InputSystem;
 
 namespace Coursework_Master_Degree.Player
@@ -31,7 +31,7 @@ namespace Coursework_Master_Degree.Player
 
         [Header("Zoom")]
         [Min(0.01f)] public float ZoomLookFieldOfView;
-        [DisableIf("Enabled")]
+        [EnableIf("NotEnabled")]
         [Min(0.01f)] public float ZoomLookSpeed;
         [Min(0.1f)] public float ZoomLookTransitionDuration;
 
