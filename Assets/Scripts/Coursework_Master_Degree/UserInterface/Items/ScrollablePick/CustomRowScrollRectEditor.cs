@@ -18,7 +18,9 @@ namespace Coursework_Master_Degree.UserInterface.Items.ScrollablePick
         {
             serializedObject.Update();
 
+            EditorGUI.BeginDisabledGroup(true);
             EditorGUILayout.PropertyField(_parentScrollRect);
+            EditorGUI.EndDisabledGroup();
 
             base.OnInspectorGUI();
 

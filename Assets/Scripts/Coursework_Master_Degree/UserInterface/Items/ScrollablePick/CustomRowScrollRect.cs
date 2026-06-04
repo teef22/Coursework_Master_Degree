@@ -6,7 +6,9 @@ namespace Coursework_Master_Degree.UserInterface.Items.ScrollablePick
 {
     public class CustomRowScrollRect : ScrollRect
     {
-        [SerializeField] public ScrollRect ParentScrollRect;
+        [SerializeField]
+        [Tooltip("Set via script")]
+        public ScrollRect ParentScrollRect;
 
         private enum DragRoute
         {
