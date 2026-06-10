@@ -7,6 +7,7 @@ using Coursework_Master_Degree.UserInterface.PrefabData.RegularPick;
 using Coursework_Master_Degree.UserInterface.PrefabData.ScrollablePick;
 using Coursework_Master_Degree.UserInterface.Items.ScrollablePick;
 using Coursework_Master_Degree.ScriptableObjects.Items;
+using Coursework_Master_Degree.Items.Placement;
 
 namespace Coursework_Master_Degree.UserInterface.Items
 {
@@ -25,6 +26,10 @@ namespace Coursework_Master_Degree.UserInterface.Items
         public GameObject ItemScrollablePickCanvas;
         public GameObject Row;
         public GameObject Item;
+
+        [Header("Placement")]
+        public NewItemPlacementManager NewItemPlacementManager;
+        public NewItemPlacementInputManager NewItemPlacementInputManager;
 
         private GameObject _coreItemPickCanvasGameObjects;
         public GameObject CoreItemPickCanvasGameObjects {
@@ -196,10 +201,18 @@ namespace Coursework_Master_Degree.UserInterface.Items
                 int numberOfItems = userInterfaceNodeSO.ItemsListSOs[rowIndex].ItemsList.Length;
                 for (int itemIndex = 0; itemIndex < numberOfItems; itemIndex++)
                 {
+                    // make item variable to easily access its data
+                    // and
+                    // capture item to avoid closure-capture-in-a-lood issue for row/item indexes used inside lambda
+                    ItemSO itemSO = userInterfaceNodeSO.ItemsListSOs[rowIndex].ItemsList[itemIndex];
+
                     // create item
                     GameObject itemGameObject = Instantiate(Item, rowContentGameObject.transform);
                     // retrieve data holder
                     ItemDataHolder itemDataHolder = itemGameObject.GetComponent<ItemDataHolder>();
+
+                    // set item so
+                    itemDataHolder.ItemSO = itemSO;
 
                     // set description header text field
                     itemDataHolder.DescriptionHeaderText = itemScrollablePickCanvasDataHolder.DescriptionHeaderText;
@@ -209,15 +222,15 @@ namespace Coursework_Master_Degree.UserInterface.Items
                     // set description text data of the first item of the first row
                     if (rowIndex == 0 && itemIndex == 0)
                     {
-                        string name = userInterfaceNodeSO.ItemsListSOs[rowIndex].ItemsList[itemIndex].Name;
-                        string description = userInterfaceNodeSO.ItemsListSOs[rowIndex].ItemsList[itemIndex].Description;
+                        string name = itemSO.Name;
+                        string description = itemSO.Description;
 
                         itemDataHolder.DescriptionHeaderText.text = name;
                         itemDataHolder.DescriptionBodyText.text = description;
                     }
 
                     // get item image and create sprite out of it
-                    Texture2D itemImage = userInterfaceNodeSO.ItemsListSOs[rowIndex].ItemsList[itemIndex].Icon;
+                    Texture2D itemImage = itemSO.Icon;
                     Sprite itemImageSprite = Sprite.Create(
                         itemImage,
                         new Rect(0, 0, itemImage.width, itemImage.height),
@@ -226,24 +239,39 @@ namespace Coursework_Master_Degree.UserInterface.Items
                     // set item image
                     itemDataHolder.IconImage.sprite = itemImageSprite;
                     // get item name text
-                    string itemName = userInterfaceNodeSO.ItemsListSOs[rowIndex].ItemsList[itemIndex].Name;
+                    string itemName = itemSO.Name;
                     // set item name text
                     itemDataHolder.NameText.text = itemName;
                     // get item price text
-                    float itemPrice = userInterfaceNodeSO.ItemsListSOs[rowIndex].ItemsList[itemIndex].Price;
+                    float itemPrice = itemSO.Price;
                     // set item price text
                     itemDataHolder.PriceText.text = itemPrice + " $";
 
                     // subscribe to pointer enter action
                     ItemHoverManager itemHoverManager = itemGameObject.GetComponent<ItemHoverManager>();
-                    // capture item to avoid closure-capture-in-a-lood issue for row/item indexes used inside lambda
-                    ItemSO item = userInterfaceNodeSO.ItemsListSOs[rowIndex].ItemsList[itemIndex];
                     itemHoverManager.OnPointerEnterAction += 
                         () =>
                         {
-                            itemDataHolder.DescriptionHeaderText.text = item.Name;
-                            itemDataHolder.DescriptionBodyText.text = item.Description;
+                            itemDataHolder.DescriptionHeaderText.text = itemSO.Name;
+                            itemDataHolder.DescriptionBodyText.text = itemSO.Description;
                         };
+                    
+                    Button itemButton = itemGameObject.GetComponent<Button>();
+                    itemButton.onClick.AddListener(
+                    () =>
+                    {
+                        ResetLastActiveItemPickInterfaceScroll();
+
+                        itemScrollablePickCanvasGameObject.SetActive(false);
+
+                        _lastActiveItemPickCanvasGameObjectUserInterfaceNodeType = UserInterfaceNodeType.ScrollablePick;
+                        _lastActiveItemPickCanvasGameObject = itemScrollablePickCanvasGameObject;
+
+                        NewItemPlacementManager.NewItemSODataToPlace = itemSO;
+
+                        NewItemPlacementManager.enabled = true;
+                        NewItemPlacementInputManager.enabled = true;
+                    });
                 }
             }
 
