@@ -33,6 +33,10 @@ namespace Coursework_Master_Degree.UserInterface.Items
 
         void OnDisable()
         {
+            _showCoreItemPickMenuInterfaceValue = default;
+            _hideAnyMenuInterfaceValue = default;
+            _isCoreItemPickMenuInterfaceShown = default;
+
             _showCoreItemPickMenuInterfaceInputAction.Disable();
             _hideAnyMenuInterfaceInputAction.Disable();
         }
