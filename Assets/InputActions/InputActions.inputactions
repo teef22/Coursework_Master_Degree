@@ -3,7 +3,7 @@
     "name": "InputActions",
     "maps": [
         {
-            "name": "player_movement",
+            "name": "regular_movement",
             "id": "ee54fa7b-f9cd-4e7d-9e9f-cff0915c634a",
             "actions": [
                 {
@@ -270,6 +270,178 @@
                     "processors": "",
                     "groups": ";keyboard&mouse",
                     "action": "hide_any_menu_interface",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "item_placement_movement",
+            "id": "42b2b70c-1922-4466-bb0e-f0f4c5baca10",
+            "actions": [
+                {
+                    "name": "move",
+                    "type": "Value",
+                    "id": "00a7f9ae-c149-424f-af4d-e6958eaeae77",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "look",
+                    "type": "Value",
+                    "id": "c87cf1f7-517a-4e5c-bd8b-07ff212c9d93",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "crouch",
+                    "type": "Button",
+                    "id": "160f3e4f-23a4-4405-b579-4a768424bff9",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "place_item",
+                    "type": "Button",
+                    "id": "ae27552c-4e66-47a9-8937-b0fd1dd17a4b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "pick_item",
+                    "type": "Button",
+                    "id": "b272ac00-1eab-4f0e-935a-085ae30bb77c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "rotate_item",
+                    "type": "Value",
+                    "id": "a4a1a86f-a6e9-4b2c-ac64-f1bac919c8c5",
+                    "expectedControlType": "Delta",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "wasd",
+                    "id": "2e7ad95c-4d75-4dc2-8ec6-d8fc506dc0f0",
+                    "path": "2DVector",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "6f165e44-7103-414c-9cb9-dde5c54d46b6",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "keyboard&mouse",
+                    "action": "move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "cde6d2eb-fd87-4c75-8920-1d0f2ec4b270",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";keyboard&mouse",
+                    "action": "move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "40406b6a-f90e-4ad2-9c14-3a5a9dadddde",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";keyboard&mouse",
+                    "action": "move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "673a5cdd-2925-413b-8934-16df82aea0a3",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";keyboard&mouse",
+                    "action": "move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "ae0750e9-2288-412e-8961-d59c9a69a144",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";keyboard&mouse",
+                    "action": "crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ba970ece-b81d-40d7-b479-93164ae6d836",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";keyboard&mouse",
+                    "action": "look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6cb0c4f7-99d8-4563-a049-5ddf960956ed",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";keyboard&mouse",
+                    "action": "place_item",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a1ce4633-3741-425e-8f58-a18d70a40df4",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";keyboard&mouse",
+                    "action": "pick_item",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b05982f7-fd4b-49ea-aef7-504cea804572",
+                    "path": "<Mouse>/scroll",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";keyboard&mouse",
+                    "action": "rotate_item",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
