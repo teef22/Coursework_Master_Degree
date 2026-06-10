@@ -15,6 +15,7 @@ namespace Coursework_Master_Degree.ScriptableObjects.Items
         public float Price;
 
         public GameObject Prefab;
+
         public Texture2D Icon;
 
         public ItemType[] ItemTypes;
