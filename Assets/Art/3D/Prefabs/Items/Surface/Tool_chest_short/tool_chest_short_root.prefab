@@ -191,7 +191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8456619577377419429}
   - component: {fileID: 6671619910669488516}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: shelf_collider_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2217646152607545280}
   - component: {fileID: 1227341853196193992}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: shelf_collider_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -575,7 +575,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
@@ -592,6 +592,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.Items.DataHolder
   ItemData: {fileID: 11400000, guid: 3d65f5f983970c327b08983df0d79b51, type: 2}
+  MeshRenderersList:
+  - {fileID: 8607780846692587627}
+  - {fileID: 5704213959112323812}
+  - {fileID: 5489305910174619668}
+  CornersList:
+  - {fileID: 3161813488782694081}
+  - {fileID: 7307611800746835973}
+  - {fileID: 7123037919202254473}
+  - {fileID: 2359962742661268315}
+  RightGameObject: {fileID: 0}
+  WrongGameObject: {fileID: 0}
 --- !u!1 &5198182080735955374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,7 +1125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 137023693563925059}
   - component: {fileID: 8961378860392678904}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: shelf_collider_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

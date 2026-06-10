@@ -299,7 +299,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
@@ -473,7 +473,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
@@ -951,7 +951,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
@@ -968,6 +968,63 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.Items.DataHolder
   ItemData: {fileID: 11400000, guid: 7440c7af9d07d24e3bbff4760f761771, type: 2}
+  MeshRenderersList:
+  - {fileID: 1496354528433127133}
+  - {fileID: 3961147571679382288}
+  - {fileID: 2700852189281584161}
+  - {fileID: 7590790787782759700}
+  - {fileID: 749670713496550805}
+  - {fileID: 8832427745050312019}
+  - {fileID: 5833470946212796748}
+  - {fileID: 1354588767060745356}
+  - {fileID: 7290304710079008497}
+  - {fileID: 1905642462438685296}
+  - {fileID: 1275668234347986206}
+  - {fileID: 1754983352454238804}
+  - {fileID: 5848400171841605648}
+  - {fileID: 6000713900492136215}
+  - {fileID: 3100643737507317259}
+  - {fileID: 5785366445477834736}
+  - {fileID: 2212139182660602602}
+  - {fileID: 1118464122898697170}
+  - {fileID: 5147795025047475621}
+  - {fileID: 1171767229298678220}
+  - {fileID: 6354912327516460851}
+  - {fileID: 1588824311367851761}
+  - {fileID: 5661209191759669219}
+  - {fileID: 1309189283782434015}
+  - {fileID: 3152621220964328664}
+  - {fileID: 1606656809464709414}
+  - {fileID: 4518264060765243044}
+  - {fileID: 9181186222839635753}
+  - {fileID: 3667430885899625659}
+  - {fileID: 8670448576398822927}
+  - {fileID: 1380660297602794884}
+  - {fileID: 6674639181533846234}
+  - {fileID: 5873448778019710649}
+  - {fileID: 1286556354552231492}
+  - {fileID: 5289194538125379866}
+  - {fileID: 7611544655177297359}
+  - {fileID: 2614513659517343219}
+  - {fileID: 2444180002763031313}
+  - {fileID: 4955724354923195610}
+  - {fileID: 1158949717442527240}
+  - {fileID: 6297314331404228670}
+  - {fileID: 1927170243155920207}
+  - {fileID: 7092876445749585729}
+  - {fileID: 4309958981841819419}
+  - {fileID: 224493847041552248}
+  CornersList:
+  - {fileID: 2616463975723461648}
+  - {fileID: 7559303466453107090}
+  - {fileID: 8137857571459545158}
+  - {fileID: 8880838268098369523}
+  - {fileID: 177687056330852253}
+  - {fileID: 3835705971871000215}
+  - {fileID: 1450362242197763915}
+  - {fileID: 7714087329944694731}
+  RightGameObject: {fileID: 0}
+  WrongGameObject: {fileID: 0}
 --- !u!1 &2616463975723461648
 GameObject:
   m_ObjectHideFlags: 0

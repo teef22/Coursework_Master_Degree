@@ -132,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8440304075051125937}
   - component: {fileID: 8628369492029339313}
+  - component: {fileID: 5618919355045468542}
   - component: {fileID: 8771976657203517449}
   - component: {fileID: 3501674174803908295}
   m_Layer: 0
@@ -186,6 +187,32 @@ MonoBehaviour:
   ZoomLookTransitionDuration: 0.1
   CrouchScale: 0.5
   CrouchTransitionDuration: 0.3
+  Yaw: 0
+  Pitch: 0
+--- !u!114 &5618919355045468542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5879855173042336699}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8ce9beb433cfe0b8f762f251361281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovementPlacementMode
+  PlayerRigidbody: {fileID: 8771976657203517449}
+  EyesTransform: {fileID: 3481415748428377934}
+  EyesCamera: {fileID: 2150490673395912624}
+  GlobalInputAction: {fileID: -944628639613478452, guid: 4bff531e5862c70e78c2778499520888, type: 3}
+  MoveSpeed: 1
+  LookSpeed: 1
+  UpLimitLookAngle: -70
+  DownLimitLookAngle: 70
+  CrouchScale: 0.5
+  CrouchTransitionDuration: 0.3
+  Yaw: 0
+  Pitch: 0
 --- !u!54 &8771976657203517449
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -432,7 +459,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 6199
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0

@@ -169,7 +169,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
@@ -198,7 +198,7 @@ Transform:
   m_GameObject: {fileID: 4264339814143824933}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.2227}
+  m_LocalPosition: {x: 0, y: 0, z: 0.143}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -365,6 +365,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.Items.DataHolder
   ItemData: {fileID: 11400000, guid: 1aea45d841f34b8c5b08cafce147b6e7, type: 2}
+  MeshRenderersList:
+  - {fileID: 7531806086575104116}
+  - {fileID: 2707032297561399028}
+  CornersList:
+  - {fileID: 8024924300728597664}
+  - {fileID: 7274579676128553326}
+  - {fileID: 4264339814143824933}
 --- !u!1 &7059623307243349342
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,7 +428,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
@@ -450,7 +457,7 @@ Transform:
   m_GameObject: {fileID: 7274579676128553326}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.0702}
+  m_LocalPosition: {x: 0, y: 0, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -515,7 +522,7 @@ Transform:
   m_GameObject: {fileID: 8024924300728597664}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0708}
+  m_LocalPosition: {x: 0, y: 0, z: -0.151}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

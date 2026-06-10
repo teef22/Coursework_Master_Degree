@@ -210,7 +210,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
@@ -227,6 +227,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.Items.DataHolder
   ItemData: {fileID: 11400000, guid: 69606cf617bb05ebf9c201d2b399b248, type: 2}
+  MeshRenderersList:
+  - {fileID: 995487085216325123}
+  - {fileID: 6413148937076676457}
+  CornersList:
+  - {fileID: 4878311919964064881}
+  - {fileID: 3402087577540052403}
+  - {fileID: 9164413864750640465}
+  - {fileID: 619112787721398634}
 --- !u!1 &4878311919964064881
 GameObject:
   m_ObjectHideFlags: 0

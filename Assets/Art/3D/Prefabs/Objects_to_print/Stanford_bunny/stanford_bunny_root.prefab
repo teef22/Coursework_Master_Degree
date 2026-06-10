@@ -175,6 +175,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.ObjectsToPrint.DataHolder
   ObjectToPrintData: {fileID: 11400000, guid: 1aad6c18fb6dd8235a5e423621e98a79, type: 2}
+  MeshRenderersList:
+  - {fileID: 5434645095796168199}
+  CornersList:
+  - {fileID: 5752121522657116296}
+  - {fileID: 1671599255976504260}
+  - {fileID: 5111568189930644605}
+  - {fileID: 8941768551628274604}
 --- !u!1 &7958278468699901064
 GameObject:
   m_ObjectHideFlags: 0

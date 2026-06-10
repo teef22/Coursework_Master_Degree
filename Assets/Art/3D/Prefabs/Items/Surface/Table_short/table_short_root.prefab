@@ -123,7 +123,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
@@ -140,6 +140,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.Items.DataHolder
   ItemData: {fileID: 11400000, guid: 9fbb5161b5ed62fbeaaeb56b90fc063e, type: 2}
+  MeshRenderersList:
+  - {fileID: 7789527656898578073}
+  CornersList:
+  - {fileID: 139127604816740668}
+  - {fileID: 5948444106155028841}
+  - {fileID: 1911665028147186358}
+  - {fileID: 3206539045418975430}
+  RightGameObject: {fileID: 0}
+  WrongGameObject: {fileID: 0}
 --- !u!1 &911862974193167277
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,7 +418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6872902204792744850}
   - component: {fileID: 8417382385005017576}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: shelf_collider_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

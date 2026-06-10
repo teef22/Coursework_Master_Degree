@@ -60,7 +60,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -77,6 +77,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.Items.DataHolder
   ItemData: {fileID: 11400000, guid: 805eb1e54c132fce49a4c1157bef7c3a, type: 2}
+  MeshRenderersList:
+  - {fileID: 785958392036304824}
+  - {fileID: 6596943295770295699}
+  - {fileID: 515723625887557707}
+  - {fileID: 6285430468767488311}
+  - {fileID: 7682942465529053342}
+  - {fileID: 4118432920821587466}
+  - {fileID: 3318486088068468841}
+  CornersList:
+  - {fileID: 9063934584562881751}
+  - {fileID: 577700518910874484}
+  - {fileID: 877659609514300993}
+  - {fileID: 4054214381767213847}
+  - {fileID: 2058655375004021718}
+  - {fileID: 3585736922821694422}
+  - {fileID: 448591079928447111}
+  - {fileID: 7762215724513035419}
+  RightGameObject: {fileID: 0}
+  WrongGameObject: {fileID: 0}
 --- !u!1 &388178645530533479
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2456099530956819253}
   - component: {fileID: 2707565676943600940}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: shelf_collider_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -755,7 +774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5286045871499712912}
   - component: {fileID: 5514006114583116293}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: shelf_collider_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1193,7 +1212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3313287696465926916}
   - component: {fileID: 812532182645387533}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: shelf_collider_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1352,7 +1371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6818806025744631024}
   - component: {fileID: 217914233551678808}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: shelf_collider_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1405,7 +1424,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2197496741965662323}
   - component: {fileID: 6238175522205005681}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: shelf_collider_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1913,7 +1932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9205008951276312871}
   - component: {fileID: 4609764448680818909}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: shelf_collider_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2110,7 +2129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7938555550533455291}
   - component: {fileID: 6598718733132569563}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: shelf_collider_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -519,7 +519,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
@@ -536,6 +536,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.Items.DataHolder
   ItemData: {fileID: 11400000, guid: d2091a6c8b0e2b32ebcf7253e5f3010a, type: 2}
+  MeshRenderersList:
+  - {fileID: 7386290925852739562}
+  - {fileID: 5719030212767360231}
+  - {fileID: 6020126548167754238}
+  - {fileID: 8572309655144255564}
+  - {fileID: 6136746037183875270}
+  - {fileID: 3783557756872584162}
+  - {fileID: 4157515107018841354}
+  - {fileID: 6566350737579493756}
+  - {fileID: 6604726148066068637}
+  - {fileID: 8261365883324490223}
+  - {fileID: 2922400913247780198}
+  - {fileID: 504550139007210320}
+  - {fileID: 2888854144188928023}
+  - {fileID: 3284550787567644507}
+  - {fileID: 7759874380755718672}
+  - {fileID: 6299474521444002039}
+  - {fileID: 4276230014130004753}
+  - {fileID: 1990996035772198477}
+  - {fileID: 1601353144801678530}
+  - {fileID: 3113625364904202267}
+  CornersList:
+  - {fileID: 754853493259057775}
+  - {fileID: 5889037363017457757}
+  - {fileID: 5089404122784192724}
+  - {fileID: 3963352525887108435}
+  RightGameObject: {fileID: 0}
+  WrongGameObject: {fileID: 0}
 --- !u!1 &2588941799893200501
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,7 +627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2266442241392448074}
   - component: {fileID: 1242774793017122716}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: shelf_collider_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1082,7 +1110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &587984223936318083
 Transform:
   m_ObjectHideFlags: 0
@@ -1323,7 +1351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7499097485299544911}
   - component: {fileID: 4622252433251077030}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: shelf_collider_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

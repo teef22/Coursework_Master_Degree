@@ -446,6 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb44c9e1cebad41e9247efd832dbd54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coursework_Master_Degree.UserInterface.PrefabData.ScrollablePick.ItemsDataHolder
+  ItemSO: {fileID: 0}
   IconImage: {fileID: 1798661634314832780}
   NameText: {fileID: 4415357520275813907}
   PriceText: {fileID: 2713937161974343560}

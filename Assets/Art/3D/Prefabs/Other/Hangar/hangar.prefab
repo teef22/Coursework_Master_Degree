@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 2574284831554241953}
   - component: {fileID: 1090636592280047846}
   - component: {fileID: 3502284428499469923}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: hangar_floor_inside
   m_TagString: floor
   m_Icon: {fileID: 0}
