@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using NaughtyAttributes;
+using Coursework_Master_Degree.ScriptableObjects.Items;
 
 namespace Coursework_Master_Degree.UserInterface.PrefabData.ScrollablePick
 {
@@ -10,6 +11,10 @@ namespace Coursework_Master_Degree.UserInterface.PrefabData.ScrollablePick
         // naughty attributes enableif / disableif states
         private bool NotEnabled => false;
         private bool Enabled => true;
+
+        [EnableIf("NotEnabled")]
+        [Tooltip("Set via script")]
+        public ItemSO ItemSO;
 
         public Image IconImage;
         public TextMeshProUGUI NameText;
