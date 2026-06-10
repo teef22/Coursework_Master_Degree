@@ -39,8 +39,12 @@ namespace Coursework_Master_Degree.Player
         [Min(0.3f)] public float CrouchScale;
         [Min(0.1f)] public float CrouchTransitionDuration;
 
-        private float _yaw;
-        private float _pitch;
+        [EnableIf("NotEnabled")]
+        [Tooltip("Exposed to show avaliability, disabled to forbid value set in editor")]
+        public float Yaw;
+        [EnableIf("NotEnabled")]
+        [Tooltip("Exposed to show avaliability, disabled to forbid value set in editor")]
+        public float Pitch;
 
         private InputAction _moveInputAction;
         private InputAction _speedUpInputAction;
@@ -106,7 +110,7 @@ namespace Coursework_Master_Degree.Player
                 Debug.LogError("UpLimitLookAngle must be smaller than DownLimitLookAngle");
             }
 
-            InputActionMap inputActionMap = GlobalInputAction.FindActionMap("player_movement", true);
+            InputActionMap inputActionMap = GlobalInputAction.FindActionMap("regular_movement", true);
             _moveInputAction = inputActionMap.FindAction("move", true);
             _speedUpInputAction = inputActionMap.FindAction("speed_up", true);
             _slowDownInputAction = inputActionMap.FindAction("slow_down", true);
@@ -123,6 +127,8 @@ namespace Coursework_Master_Degree.Player
 
         void OnEnable()
         {
+            HideCursor();
+
             _moveInputAction.Enable();
             _speedUpInputAction.Enable();
             _slowDownInputAction.Enable();
@@ -160,7 +166,7 @@ namespace Coursework_Master_Degree.Player
 
             CalculateLook();
 
-            EyesTransform.localRotation = Quaternion.Euler(_pitch, 0f, 0f);
+            EyesTransform.localRotation = Quaternion.Euler(Pitch, 0f, 0f);
 
             ApplyZoomLook();
             ApplyCrouch();
@@ -168,9 +174,9 @@ namespace Coursework_Master_Degree.Player
 
         private void CalculateLook()
         {
-            _yaw += _lookValue.x * _currentLookSpeed * Time.deltaTime;
-            _pitch -= _lookValue.y * _currentLookSpeed * Time.deltaTime;
-            _pitch = Mathf.Clamp(_pitch, UpLimitLookAngle, DownLimitLookAngle);
+            Yaw += _lookValue.x * _currentLookSpeed * Time.deltaTime;
+            Pitch -= _lookValue.y * _currentLookSpeed * Time.deltaTime;
+            Pitch = Mathf.Clamp(Pitch, UpLimitLookAngle, DownLimitLookAngle);
         }
 
         private void ApplyZoomLook()
@@ -269,7 +275,7 @@ namespace Coursework_Master_Degree.Player
 
         void FixedUpdate()
         {
-            PlayerRigidbody.MoveRotation(Quaternion.Euler(0f, _yaw, 0f));
+            PlayerRigidbody.MoveRotation(Quaternion.Euler(0f, Yaw, 0f));
 
             Vector3 moveDirection =
                 PlayerRigidbody.transform.forward * _moveValue.y +
